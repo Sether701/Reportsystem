@@ -6,6 +6,7 @@ public class Main extends JavaPlugin {
 
 	private static Main plugin;
 	public static String PREFIX;
+	public static String MODE;
 	
 	@Override
 	public void onEnable() {
