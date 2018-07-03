@@ -5,6 +5,8 @@ import net.md_5.bungee.api.plugin.Plugin;
 public class Main extends Plugin {
 
 	private static Main plugin;
+	public static String PREFIX;
+	public static String MODE;
 	
 	@Override
 	public void onEnable() {
