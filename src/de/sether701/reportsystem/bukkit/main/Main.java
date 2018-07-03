@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
 	private static Main plugin;
+	public static String PREFIX;
 	
 	@Override
 	public void onEnable() {
