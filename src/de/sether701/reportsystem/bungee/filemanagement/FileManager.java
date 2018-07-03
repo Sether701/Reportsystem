@@ -9,6 +9,8 @@ import de.sether701.reportsystem.bungee.main.Main;
 
 public class FileManager {
 
+	private Yaml settingsYaml;
+	
 	private static final String PATH_PREFIX = "prefix",
 			PATH_MODE = "mode";
 	
@@ -20,7 +22,7 @@ public class FileManager {
 		add("gui");
 	}};
 	
-	public static void createFiles() {
+	public void createFiles() {
 		
 		String path = Main.getPlugin().getDataFolder().getPath();
 		File folder = new File(path);
@@ -29,7 +31,7 @@ public class FileManager {
 			folder.mkdirs();
 		}
 		
-		Yaml settingsYaml = new Yaml(path, "config.yml");
+		settingsYaml = new Yaml(path, "config.yml");
 		
 		Main.PREFIX = ChatColor.translateAlternateColorCodes('&', settingsYaml.read(PATH_PREFIX) + " &r");
 		String mode = (String) settingsYaml.read(PATH_MODE);
@@ -39,6 +41,10 @@ public class FileManager {
 			Main.MODE = "invalid";
 		}
 		
+	}
+	
+	public Yaml getConfig() {
+		return settingsYaml;
 	}
 	
 }
