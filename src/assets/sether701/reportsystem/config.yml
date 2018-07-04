@@ -15,3 +15,7 @@ mode: 'none'
 
 # please choose 'en' for english or 'de' for german ingame messages
 language: 'en'
+
+# If you choose 'true' you have to fill out the file mysql.yml. Otherwise the plugin won't work properly
+# If you write 'false' all datas will be saved in files
+mysql: 'true'
