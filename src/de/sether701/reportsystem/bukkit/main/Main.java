@@ -2,8 +2,6 @@ package de.sether701.reportsystem.bukkit.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import de.sether701.reportsystem.bungee.filemanagement.FileManager;
-
 public class Main extends JavaPlugin {
 
 	private static Main plugin;
