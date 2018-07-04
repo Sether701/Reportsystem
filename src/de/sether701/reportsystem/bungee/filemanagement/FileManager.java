@@ -9,12 +9,15 @@ import net.md_5.bungee.api.ChatColor;
 public class FileManager {
 
 	private Yaml settingsYaml;
+	private Yaml permissionsYaml;
+	private Yaml languageYaml;
 	
 	private static final String PATH_PREFIX = "prefix",
-								PATH_MODE = "mode";
+								PATH_MODE = "mode",
+								PATH_LANGUAGE = "language";
 	
 	@SuppressWarnings("serial")
-	private static final ArrayList<String> modes = new ArrayList<String>() {{
+	private final ArrayList<String> modes = new ArrayList<String>() {{
 		add("none"); 
 		add("custom"); 
 		add("list"); 
@@ -30,6 +33,8 @@ public class FileManager {
 			folder.mkdirs();
 		}
 		
+		/* settings */
+		
 		settingsYaml = new Yaml(path, "config.yml");
 		
 		BungeeMain.PREFIX = ChatColor.translateAlternateColorCodes('&', settingsYaml.read(PATH_PREFIX) + " &r");
@@ -40,10 +45,29 @@ public class FileManager {
 			BungeeMain.MODE = "invalid";
 		}
 		
+		/* language */
+		
+		String lang = (String) settingsYaml.read(PATH_LANGUAGE);
+		if(!(lang.equalsIgnoreCase("de") || lang.equalsIgnoreCase("en"))) lang = "en";
+		languageYaml = new Yaml(path, "lang_"+lang+".yml");
+		
+		/* permissions */
+		
+		permissionsYaml = new Yaml(path, "permissions.yml");
+		
+		
 	}
 	
 	public Yaml getConfig() {
 		return settingsYaml;
+	}
+	
+	public Yaml getLanguage() {
+		return languageYaml;
+	}
+	
+	public Yaml getPermissions() {
+		return permissionsYaml;
 	}
 	
 }

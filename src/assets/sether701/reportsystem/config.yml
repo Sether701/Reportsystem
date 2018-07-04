@@ -12,3 +12,6 @@ prefix: '&7[&4Report&7]'
 # 'gui' also allows the admin to choose some reasons
 # but in this case, they are presented by items in a GUI (Graphical User Interface) / Inventory
 mode: 'none'
+
+# please choose 'en' for english or 'de' for german ingame messages
+language: 'en'
