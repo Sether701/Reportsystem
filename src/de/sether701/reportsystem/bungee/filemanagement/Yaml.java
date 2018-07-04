@@ -8,7 +8,7 @@ import java.io.OutputStream;
 
 import com.google.common.io.ByteStreams;
 
-import de.sether701.reportsystem.bukkit.main.Main;
+import de.sether701.reportsystem.bungee.main.BungeeMain;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
@@ -38,7 +38,7 @@ public class Yaml {
 	}
 	
 	private void setStandard() {
-		try(InputStream in = Main.getPlugin().getResource("assets/sether701/reportsystem/" + file.getName());
+		try(InputStream in = BungeeMain.getPlugin().getResourceAsStream("assets/sether701/reportsystem/" + file.getName());
 			OutputStream out = new FileOutputStream(file)) {
 			ByteStreams.copy(in, out);
 		} catch (IOException e) {

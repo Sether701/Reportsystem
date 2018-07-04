@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
 
-import de.sether701.reportsystem.bungee.main.Main;
+import de.sether701.reportsystem.bungee.main.BungeeMain;
 
 public class FileManager {
 
 	private Yaml settingsYaml;
 	
 	private static final String PATH_PREFIX = "prefix",
-			PATH_MODE = "mode";
+								PATH_MODE = "mode";
 	
 	@SuppressWarnings("serial")
 	private static final ArrayList<String> modes = new ArrayList<String>() {{
@@ -24,7 +24,7 @@ public class FileManager {
 	
 	public void createFiles() {
 		
-		String path = Main.getPlugin().getDataFolder().getPath();
+		String path = BungeeMain.getPlugin().getDataFolder().getPath();
 		File folder = new File(path);
 		
 		if(!(folder.exists())) {
@@ -33,12 +33,12 @@ public class FileManager {
 		
 		settingsYaml = new Yaml(path, "config.yml");
 		
-		Main.PREFIX = ChatColor.translateAlternateColorCodes('&', settingsYaml.read(PATH_PREFIX) + " &r");
+		BungeeMain.PREFIX = ChatColor.translateAlternateColorCodes('&', settingsYaml.read(PATH_PREFIX) + " &r");
 		String mode = (String) settingsYaml.read(PATH_MODE);
 		if(modes.contains(mode)) {
-			Main.MODE = mode;
+			BungeeMain.MODE = mode;
 		} else {
-			Main.MODE = "invalid";
+			BungeeMain.MODE = "invalid";
 		}
 		
 	}
