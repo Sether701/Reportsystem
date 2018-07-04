@@ -3,9 +3,8 @@ package de.sether701.reportsystem.bungee.filemanagement;
 import java.io.File;
 import java.util.ArrayList;
 
-import org.bukkit.ChatColor;
-
 import de.sether701.reportsystem.bungee.main.BungeeMain;
+import net.md_5.bungee.api.ChatColor;
 
 public class FileManager {
 
