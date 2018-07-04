@@ -2,9 +2,9 @@ package de.sether701.reportsystem.bukkit.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public class BukkitMain extends JavaPlugin {
 
-	private static Main plugin;
+	private static BukkitMain plugin;
 	
 	@Override
 	public void onEnable() {
@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
 		
 	}
 	
-	public static Main getPlugin() {
+	public static BukkitMain getPlugin() {
 		return plugin;
 	}
 }
