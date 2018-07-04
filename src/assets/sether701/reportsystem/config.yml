@@ -3,7 +3,7 @@
 # Above each variable is a little explanation
 
 # prefix in front of any plugin message
-prefix: &7[&4Report&7]
+prefix: '&7[&4Report&7]'
 
 # 'mode' is the plugin-mode you want to use
 # If the mode is 'none' the plugin doesn't even start
@@ -11,4 +11,4 @@ prefix: &7[&4Report&7]
 # 'list' allows the admin to choose the reasons and put them in a list, user have to choose from
 # 'gui' also allows the admin to choose some reasons
 # but in this case, they are presented by items in a GUI (Graphical User Interface) / Inventory
-mode: none
+mode: 'none'
