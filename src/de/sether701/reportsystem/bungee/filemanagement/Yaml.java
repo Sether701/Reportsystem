@@ -23,6 +23,7 @@ public class Yaml {
 		if(!(file.exists())) {
 			try {
 				file.createNewFile();
+				this.file = file;
 				setStandard();
 			} catch (IOException e) {
 				e.printStackTrace();
