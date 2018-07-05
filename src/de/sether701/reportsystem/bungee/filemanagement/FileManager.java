@@ -30,6 +30,13 @@ public class FileManager {
 								MYSQL_PATH_HOST = "host",
 								MYSQL_PATH_PORT = "port";
 	
+	public static final String LANG_UNSUCCESSFUL_PLUGINSTART = "console.unsuccessful_pluginstart",
+						  		LANG_SUCCESSFUL_PLUGINSTART = "console.successful_pluginstart",        
+						  		LANG_CONFIG_MODE_none_1 = "console.config_mode_none_1",
+						  		LANG_CONFIG_MODE_none_2 = "console.config_mode_none_2",
+						  		LANG_CONFIG_MODE_INVALID = "console.config_mode_invalid",
+						  		LANG_MYSQL_INVALID = "console.mysql_invalid";
+	
 	@SuppressWarnings("serial")
 	private final ArrayList<String> modes = new ArrayList<String>() {{
 		add("none"); 
