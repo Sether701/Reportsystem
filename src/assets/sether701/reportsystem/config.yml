@@ -17,5 +17,5 @@ mode: 'none'
 language: 'en'
 
 # If you choose 'true' you have to fill out the file mysql.yml. Otherwise the plugin won't work properly
-# If you write 'false' all datas will be saved in files
+# If you write 'false' all data will be saved in files
 mysql: 'true'

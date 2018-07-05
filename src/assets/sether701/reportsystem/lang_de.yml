@@ -1,0 +1,7 @@
+console:
+  unsuccessful_pluginstart: '&eDas Plugin konnte nicht gestartet werden' 
+  successful_pluginstart: '&eDas Plugin wurde erfolgreich gestartet'                      
+  config_mode_none_1: '&eBitte wähle zunächst einen Modus in der config.yml aus'     
+  config_mode_none_2: '&eund nehme gegebenenfalls noch weitere Einstellungen vor'   
+  config_mode_invalid: '&eIn der config.yml wurde ein ungültiger Modus eingestellt'       
+  mysql_invalid: '&eBitte überprüfe die Daten in der mysql.yml'                                             
