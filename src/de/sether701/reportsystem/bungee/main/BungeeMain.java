@@ -3,9 +3,11 @@ package de.sether701.reportsystem.bungee.main;
 import org.bukkit.ChatColor;
 
 import de.sether701.reportsystem.bungee.filemanagement.FileManager;
+import de.sether701.reportsystem.bungee.pmc.BungeePMC;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Plugin;
+import net.md_5.bungee.api.plugin.PluginManager;
 
 public class BungeeMain extends Plugin {
 
@@ -29,6 +31,8 @@ public class BungeeMain extends Plugin {
 		
 		fileManager = new FileManager();
 		fileManager.createFiles();
+		
+		/* start messages */
 		
 		switch (MODE) {
 			case "none":
@@ -64,6 +68,9 @@ public class BungeeMain extends Plugin {
 				sendConsoleMessage(CONSOLE_SUFFIX_GOOD);
 				break;
 		}
+		
+		PluginManager pm = this.getProxy().getPluginManager();
+		pm.registerListener(this, new BungeePMC());
 		
 	}
 	
