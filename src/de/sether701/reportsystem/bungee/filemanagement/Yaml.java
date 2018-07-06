@@ -47,8 +47,10 @@ public class Yaml {
 		}
 	}
 	
-	public Object read(String path) {
-		return config.get(path);
+	public Object read(FilePath path) {
+		return (config.get(path.getPath()) instanceof String) ?
+				(BungeeMain.translateColorCode((String) config.get(path.getPath()))) :
+				config.get(path.getPath());
 	}
 	
 	public Configuration getConfig() {
