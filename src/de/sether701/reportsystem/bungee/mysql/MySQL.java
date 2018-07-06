@@ -31,7 +31,7 @@ public class MySQL {
 		try {
 			con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?autoReconnect=true", user, password);
 			return true;
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			return false;
 		}
 	}
